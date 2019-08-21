@@ -36,7 +36,7 @@ def main_page():
 
         # Process input with logic
         data['number_range'] = get_next_ten_numbers(data['number2'])
-        plots['example_plot'] = create_plot(data['number1'])
+        plots['example_plot'] = create_plot(data['number1'], title=data['titel'])
 
     data['errors'] = form.get_errors()  # Relay errors, can be usefull for debugging
 

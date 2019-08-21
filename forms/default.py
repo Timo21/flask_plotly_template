@@ -18,6 +18,14 @@ class DefaultForm(FlaskForm):
 
     example_boolean = BooleanField('Example Boolean', default=False)
 
+    titel_opties = [
+                    ("Titel 1","Titel 1"),
+                    ("Titel 2","Titel 2"),
+                    ("Vetcoole grafiek","Vetcoole grafiek")
+    ]
+
+    titel = SelectField('Grafiektitel', choices=titel_opties)
+
     def get_errors(self):
         errors = list()
         if self.errors:
